@@ -15,7 +15,9 @@ defmodule ChatbotWeb.VirtualAssistantOptionView do
       id: virtual_assistant_option.id,
       identification: virtual_assistant_option.identification,
       option: virtual_assistant_option.option,
-      virtual_assistant_id: virtual_assistant_option.virtual_assistant_id
+      virtual_assistant_id: virtual_assistant_option.virtual_assistant_id,
+      inserted_at: virtual_assistant_option.inserted_at,
+      updated_at: virtual_assistant_option.updated_at
     }
   end
 end

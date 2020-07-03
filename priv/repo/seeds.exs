@@ -51,12 +51,12 @@ Repo.insert!(%VirtualAssistant{id: 1, user_id: 1 ,name: "Tio-PullMan", phone: "0
 
     Repo.insert!(%VirtualAssistantQuestion{id: 7, identification: "2", question: "question2", virtual_assistant_option_id: 3})
 
-      Repo.insert!(%VirtualAssistantAnswer{id: 7, identification: "2", answer: "answer1", virtual_assistant_question_id: 6})
+      Repo.insert!(%VirtualAssistantAnswer{id: 7, identification: "2", answer: "answer1", virtual_assistant_question_id: 7})
       Repo.insert!(%VirtualAssistantTag{id: 8, identification: "2", tag: "tag1", virtual_assistant_question_id: 6})
 
     Repo.insert!(%VirtualAssistantQuestion{id: 8, identification: "3", question: "question3", virtual_assistant_option_id: 3})
 
-      Repo.insert!(%VirtualAssistantAnswer{id: 8, identification: "3", answer: "answer1", virtual_assistant_question_id: 6})
+      Repo.insert!(%VirtualAssistantAnswer{id: 8, identification: "3", answer: "answer1", virtual_assistant_question_id: 8})
       Repo.insert!(%VirtualAssistantTag{id: 9, identification: "3", tag: "tag1", virtual_assistant_question_id: 6})
 
 Repo.insert!(%VirtualAssistant{id: 2, name: "Asistente de Andrea", phone: "04249555585", description: "Asistente de tiendita", user_id: 1})

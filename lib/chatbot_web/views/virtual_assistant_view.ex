@@ -16,7 +16,9 @@ defmodule ChatbotWeb.VirtualAssistantView do
       name: virtual_assistant.name,
       phone: virtual_assistant.phone,
       description: virtual_assistant.description,
-      user_id: virtual_assistant.user_id
+      user_id: virtual_assistant.user_id,
+      inserted_at: virtual_assistant.inserted_at,
+      updated_at: virtual_assistant.updated_at
     }
   end
 end

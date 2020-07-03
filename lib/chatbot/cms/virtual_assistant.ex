@@ -9,6 +9,8 @@ defmodule Chatbot.CMS.VirtualAssistant do
 
 
     has_many :virtuals_assistants_options, Chatbot.CMS.VirtualAssistantOption
+    has_one :statistic, Chatbot.Others.Statistic
+    has_one :log, Chatbot.Others.Log
 
 
     belongs_to :user, Chatbot.Users.User

@@ -10,6 +10,7 @@ defmodule Chatbot.Repo.Migrations.CreateUsers do
       add :user_plan, :string
       add :is_active, :boolean
       add :is_admin, :boolean
+      add :avatar, :string
 
       timestamps()
     end

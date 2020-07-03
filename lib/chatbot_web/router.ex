@@ -10,6 +10,13 @@ defmodule ChatbotWeb.Router do
     plug Pow.Plug.RequireAuthenticated, error_handler: ChatbotWeb.APIAuthErrorHandler
   end
 
+  scope "/" do
+    pipe_through :api
+
+    post "/handle", ChatbotWeb.ArtificialIntelligenceController, :handle
+
+  end
+
   scope "/api", ChatbotWeb do
     pipe_through :api
 
@@ -18,6 +25,9 @@ defmodule ChatbotWeb.Router do
     resources "/virtuals_assistants_questions", VirtualAssistantQuestionController, except: [:new, :edit]
     resources "/virtuals_assistants_answers", VirtualAssistantAnswerController, except: [:new, :edit]
     resources "/virtuals_assistants_tags", VirtualAssistantTagController, except: [:new, :edit]
+    resources "/statistics", StatisticController, except: [:new, :edit]
+    resources "/logs", LogController, except: [:new, :edit]
+    resources "/users", UserController, except: [:new, :edit]
 
   end
 

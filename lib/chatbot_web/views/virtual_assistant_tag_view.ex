@@ -15,7 +15,9 @@ defmodule ChatbotWeb.VirtualAssistantTagView do
       id: virtual_assistant_tag.id,
       identification: virtual_assistant_tag.identification,
       tag: virtual_assistant_tag.tag,
-      virtual_assistant_question_id: virtual_assistant_tag.virtual_assistant_question_id
+      virtual_assistant_question_id: virtual_assistant_tag.virtual_assistant_question_id,
+      inserted_at: virtual_assistant_tag.inserted_at,
+      updated_at: virtual_assistant_tag.updated_at
     }
   end
 end

@@ -15,7 +15,9 @@ defmodule ChatbotWeb.VirtualAssistantQuestionView do
       id: virtual_assistant_question.id,
       identification: virtual_assistant_question.identification,
       question: virtual_assistant_question.question,
-      virtual_assistant_option_id: virtual_assistant_question.virtual_assistant_option_id
+      virtual_assistant_option_id: virtual_assistant_question.virtual_assistant_option_id,
+      inserted_at: virtual_assistant_question.inserted_at,
+      updated_at: virtual_assistant_question.updated_at
     }
   end
 end

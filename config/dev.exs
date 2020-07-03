@@ -2,9 +2,9 @@ use Mix.Config
 
 # Configure your database
 config :chatbot, Chatbot.Repo,
-  username: "",
-  password: "",
-  database: "",
+  username: "admin",
+  password: "20647846",
+  database: "chatbot_json_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
