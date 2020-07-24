@@ -30,7 +30,7 @@ defmodule ChatbotWeb.Router do
     resources "/statistics", StatisticController, except: [:new, :edit]
     resources "/logs", LogController, except: [:new, :edit]
     resources "/users", UserController, except: [:new, :edit]
-    post "/users_by_email", UserController, :filter_by_email, param: "email"
+    get "/users_by_email/:email", UserController, :filter_by_email, param: "email"
 
   end
 
