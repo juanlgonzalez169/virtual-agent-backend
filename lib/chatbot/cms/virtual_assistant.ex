@@ -22,7 +22,7 @@ defmodule Chatbot.CMS.VirtualAssistant do
   @doc false
   def changeset(virtual_assistant, attrs) do
     virtual_assistant
-    |> cast(attrs, [:name, :description, :phone])
+    |> cast(attrs, [:name, :description, :phone, :user_id])
     |> cast_assoc(:virtuals_assistants_options, required: true)
     |> validate_required([:name, :description, :phone])
     |> unique_constraint(:phone)

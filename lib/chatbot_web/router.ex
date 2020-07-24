@@ -14,6 +14,7 @@ defmodule ChatbotWeb.Router do
     pipe_through :api
 
     post "/handle", ChatbotWeb.ArtificialIntelligenceController, :handle
+    post "/handle2", ChatbotWeb.ArtificialIntelligence2Controller, :handle
 
   end
 
