@@ -22,6 +22,7 @@ defmodule ChatbotWeb.Router do
     pipe_through :api
 
     resources "/virtuals_assistants", VirtualAssistantController, except: [:new, :edit]
+    resources "/fully_virtuals_assistants", FullyVirtualAssistantController, only: [:index, :show]
     resources "/virtuals_assistants_options", VirtualAssistantOptionController, except: [:new, :edit]
     resources "/virtuals_assistants_questions", VirtualAssistantQuestionController, except: [:new, :edit]
     resources "/virtuals_assistants_answers", VirtualAssistantAnswerController, except: [:new, :edit]

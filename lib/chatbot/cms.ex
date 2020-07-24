@@ -22,6 +22,12 @@ defmodule Chatbot.CMS do
     |> Repo.all()
   end
 
+  def list_fully_virtuals_assistants do
+    VirtualAssistant
+    |> Repo.all()
+    |> Repo.preload(virtuals_assistants_options: [virtuals_assistants_questions: [:virtuals_assistants_tags, :virtuals_assistants_answers]])
+  end
+
   @doc """
   Gets a single virtual_assistant.
 
@@ -39,6 +45,14 @@ defmodule Chatbot.CMS do
   def get_virtual_assistant!(id) do
     VirtualAssistant
     |> Repo.get!(id)
+  end
+
+  @spec get_fully_virtual_assistant!(any) ::
+          nil | [%{optional(atom) => any}] | %{optional(atom) => any}
+  def get_fully_virtual_assistant!(id) do
+    VirtualAssistant
+    |> Repo.get!(id)
+    |> Repo.preload(virtuals_assistants_options: [virtuals_assistants_questions: [:virtuals_assistants_tags, :virtuals_assistants_answers]])
   end
   @doc """
   Creates a virtual_assistant.

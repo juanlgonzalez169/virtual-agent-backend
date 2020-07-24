@@ -1,6 +1,7 @@
 defmodule ChatbotWeb.VirtualAssistantView do
   use ChatbotWeb, :view
-  alias ChatbotWeb.VirtualAssistantView
+
+  alias ChatbotWeb.{VirtualAssistantView}
 
   def render("index.json", %{virtuals_assistants: virtuals_assistants}) do
     %{data: render_many(virtuals_assistants, VirtualAssistantView, "virtual_assistant.json")}
