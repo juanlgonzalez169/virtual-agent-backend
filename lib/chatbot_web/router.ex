@@ -29,7 +29,8 @@ defmodule ChatbotWeb.Router do
     resources "/virtuals_assistants_tags", VirtualAssistantTagController, except: [:new, :edit]
     resources "/statistics", StatisticController, except: [:new, :edit]
     resources "/logs", LogController, except: [:new, :edit]
-    resources "/users", UserController, except: [:new, :edit], param: "email"
+    resources "/users", UserController, except: [:new, :edit]
+    post "/users_by_email", UserController, :filter_by_email, param: "email"
 
   end
 
