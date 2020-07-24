@@ -10,8 +10,8 @@ defmodule ChatbotWeb.UserController do
     render(conn, "index.json", users: users)
   end
 
-  def show(conn, %{"id" => id}) do
-    user = Users.get_user!(id)
+  def show(conn, %{"email" => email}) do
+    user = Users.get_user!(email)
     render(conn, "show.json", user: user)
   end
 end

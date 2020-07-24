@@ -9,8 +9,8 @@ defmodule Chatbot.Users do
     |> Repo.all()
   end
 
-  def get_user!(id) do
+  def get_user!(email) do
     User
-    |> Repo.get!(id)
+    |> Repo.get_by(email: email)
   end
 end
